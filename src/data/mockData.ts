@@ -4,40 +4,40 @@ export const ncmData = [
     codigo: "2203.00.00",
     descricao: "Cervejas de malte",
     unidade: "L",
-    aliquotaCBS: 18.5,
-    aliquotaIBS: 28.3,
+    aliquotaCBS: 0.9,
+    aliquotaIBS: 0.1,
     observacoes: "Sujeito ao Imposto Seletivo"
   },
   {
     codigo: "8471.30.12",
     descricao: "Computadores portáteis de peso inferior a 3,5 kg",
     unidade: "UN",
-    aliquotaCBS: 16.5,
-    aliquotaIBS: 12.0,
+    aliquotaCBS: 0.9,
+    aliquotaIBS: 0.1,
     observacoes: "Redução de carga tributária"
   },
   {
     codigo: "0201.10.00",
     descricao: "Carnes de bovino, frescas ou refrigeradas, em carcaças",
     unidade: "KG",
-    aliquotaCBS: 9.25,
-    aliquotaIBS: 6.0,
+    aliquotaCBS: 0.9,
+    aliquotaIBS: 0.1,
     observacoes: "Cesta básica - alíquota reduzida"
   },
   {
     codigo: "3004.90.99",
     descricao: "Outros medicamentos",
     unidade: "UN",
-    aliquotaCBS: 12.0,
-    aliquotaIBS: 4.0,
+    aliquotaCBS: 0.9,
+    aliquotaIBS: 0.1,
     observacoes: "Redução significativa para medicamentos"
   },
   {
     codigo: "8703.23.10",
     descricao: "Automóveis de passageiros, motor explosão, 1000cm³ a 1500cm³",
     unidade: "UN",
-    aliquotaCBS: 35.0,
-    aliquotaIBS: 26.5,
+    aliquotaCBS: 0.9,
+    aliquotaIBS: 0.1,
     observacoes: "Redução moderada"
   },
 ];
@@ -99,43 +99,43 @@ export const aliquotasData = [
   {
     tributo: "PIS/COFINS",
     baseLegal: "Lei 10.637/2002 e 10.833/2003",
-    aliquotaCBS: 9.25,
-    aliquotaIBS: 0,
+    aliquotaCBS: 0.9,
+    aliquotaIBS: 0.1,
     setor: "Todos (substituído por CBS)"
   },
   {
     tributo: "CBS",
     baseLegal: "EC 132/2023",
-    aliquotaCBS: 0,
-    aliquotaIBS: 8.8,
+    aliquotaCBS: 0.9,
+    aliquotaIBS: 0.1,
     setor: "Federal - substituirá PIS/COFINS/IPI"
   },
   {
     tributo: "ICMS",
     baseLegal: "Constituição Federal",
-    aliquotaCBS: 17.0,
-    aliquotaIBS: 0,
+    aliquotaCBS: 0.9,
+    aliquotaIBS: 0.1,
     setor: "Estadual (substituído por IBS)"
   },
   {
     tributo: "ISS",
     baseLegal: "LC 116/2003",
-    aliquotaCBS: 5.0,
-    aliquotaIBS: 0,
+    aliquotaCBS: 0.9,
+    aliquotaIBS: 0.1,
     setor: "Municipal (substituído por IBS)"
   },
   {
     tributo: "IBS",
     baseLegal: "EC 132/2023",
-    aliquotaCBS: 0,
-    aliquotaIBS: 17.7,
+    aliquotaCBS: 0.9,
+    aliquotaIBS: 0.1,
     setor: "Estadual/Municipal - substituirá ICMS e ISS"
   },
   {
     tributo: "Imposto Seletivo",
     baseLegal: "EC 132/2023",
-    aliquotaCBS: 0,
-    aliquotaIBS: 1.5,
+    aliquotaCBS: 0.9,   
+    aliquotaIBS: 0.1,
     setor: "Produtos prejudiciais à saúde/meio ambiente"
   },
 ];
