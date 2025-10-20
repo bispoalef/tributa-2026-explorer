@@ -80,28 +80,28 @@ const Aliquotas = () => {
                   <div className="flex flex-1 items-center justify-between border-b p-6">
                     <div>
                       <div className="mb-1 text-xs font-medium text-muted-foreground">
-                        ALÍQUOTA ATUAL
+                        ALÍQUOTA CBS
                       </div>
                       <div className="text-3xl font-bold text-foreground">
-                        {item.aliquotaAtual === 0 ? "—" : `${item.aliquotaAtual.toFixed(2)}%`}
+                        {item.aliquotaCBS === 0 ? "—" : `${item.aliquotaCBS.toFixed(2)}%`}
                       </div>
                     </div>
                     <ArrowRight className="h-8 w-8 text-muted-foreground" />
                     <div>
                       <div className="mb-1 text-xs font-medium text-muted-foreground">
-                        ALÍQUOTA FUTURA
+                        ALÍQUOTA IBS
                       </div>
                       <div className="text-3xl font-bold text-primary">
-                        {item.aliquotaFutura === 0 ? "—" : `${item.aliquotaFutura.toFixed(2)}%`}
+                        {item.aliquotaIBS === 0 ? "—" : `${item.aliquotaIBS.toFixed(2)}%`}
                       </div>
                     </div>
                   </div>
                   
                   {/* Status */}
                   <div className="flex items-center justify-center p-4">
-                    {item.aliquotaAtual === 0 && item.aliquotaFutura > 0 ? (
+                    {item.aliquotaCBS === 0 && item.aliquotaIBS > 0 ? (
                       <Badge className="bg-green-600">Novo Tributo</Badge>
-                    ) : item.aliquotaAtual > 0 && item.aliquotaFutura === 0 ? (
+                    ) : item.aliquotaCBS > 0 && item.aliquotaIBS === 0 ? (
                       <Badge variant="secondary">Será Substituído</Badge>
                     ) : (
                       <Badge>Em Vigor</Badge>

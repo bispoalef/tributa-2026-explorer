@@ -78,7 +78,7 @@ const NCM = () => {
             </Card>
           ) : (
             filteredData.map((item, index) => {
-              const change = getAliquotaChange(item.aliquotaAtual, item.aliquotaFutura);
+              const change = getAliquotaChange(item.aliquotaCBS, item.aliquotaIBS);
               const ChangeIcon = change.icon;
               
               return (
@@ -113,19 +113,19 @@ const NCM = () => {
                     <div className="w-full bg-muted/30 p-6 md:w-80">
                       <div className="mb-4">
                         <div className="mb-1 text-xs font-medium text-muted-foreground">
-                          ALÍQUOTA ATUAL
+                          ALÍQUOTA CBS
                         </div>
                         <div className="text-2xl font-bold text-foreground">
-                          {item.aliquotaAtual.toFixed(2)}%
+                          {item.aliquotaCBS.toFixed(2)}%
                         </div>
                       </div>
                       <div className="mb-4">
                         <div className="mb-1 text-xs font-medium text-muted-foreground">
-                          ALÍQUOTA 2026 (IBS/CBS)
+                          ALÍQUOTA IBS
                         </div>
                         <div className="flex items-center gap-2">
                           <div className="text-2xl font-bold text-foreground">
-                            {item.aliquotaFutura.toFixed(2)}%
+                            {item.aliquotaIBS.toFixed(2)}%
                           </div>
                           <ChangeIcon className={`h-5 w-5 ${change.color}`} />
                         </div>
@@ -133,7 +133,7 @@ const NCM = () => {
                       <div className="flex items-center gap-2 rounded-lg bg-background p-2">
                         <span className="text-xs font-medium">Variação:</span>
                         <span className={`text-sm font-bold ${change.color}`}>
-                          {(item.aliquotaFutura - item.aliquotaAtual).toFixed(2)} p.p.
+                          {(item.aliquotaIBS - item.aliquotaCBS).toFixed(2)} p.p.
                         </span>
                         <Badge
                           variant={change.type === "redução" ? "default" : "secondary"}
