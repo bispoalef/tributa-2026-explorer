@@ -201,8 +201,8 @@ export default function CSTPage() {
               {selectedCST.related.map((item) => (
                 <Card key={item.cClassTrib} className="p-4">
                   <h4 className="font-semibold text-primary">
-                    {item.cClassTrib} — {item["Nome cClassTrib"]}
-                  </h4>
+  cClassTrib: {item.cClassTrib} — {item["Nome cClassTrib"]}
+</h4>
                   <p className="text-sm text-muted-foreground mt-1">
                     {item["Descrição cClassTrib"]}
                   </p>
