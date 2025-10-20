@@ -128,7 +128,7 @@ const Simulador = () => {
                   </>
                 ) : (
                   <>
-                    <Label htmlFor="ncm">CNAE / NBS (Serviços)</Label>
+                    <Label htmlFor="ncm">NBS (Serviços)</Label>
                     <Input
                       id="ncm"
                       placeholder="Ex: 6201-5/01 (Desenvolvimento de software)"
