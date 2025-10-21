@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Search, FileText, X, ChevronDown, ChevronUp } from "lucide-react";
+import { Search, FileText, X, Scale } from "lucide-react";
 
 // ✅ Tipo para cada item do JSON
 interface CSTItem {
@@ -22,30 +22,47 @@ interface SelectedCST {
   related: CSTItem[];
 }
 
-// ✅ Componente de texto colapsável
-function ExpandableText({ text }: { text: string }) {
+// ✅ Componente de expansão de detalhes legislativos
+function ExpandableLegislation({
+  descricao,
+  legislacao,
+}: {
+  descricao?: string;
+  legislacao?: string;
+}) {
   const [expanded, setExpanded] = useState(false);
 
   return (
     <div className="mt-3">
       <button
         onClick={() => setExpanded(!expanded)}
-        className="text-primary text-sm font-medium flex items-center gap-1 hover:underline"
+        className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
       >
-        {expanded ? (
-          <>
-            <ChevronUp className="h-4 w-4" /> Ver menos
-          </>
-        ) : (
-          <>
-            <ChevronDown className="h-4 w-4" /> Ver mais
-          </>
-        )}
+        <Scale className="h-5 w-5" />
+        <span className="text-sm font-medium">
+          {expanded ? "Ocultar detalhes" : "Ver legislação"}
+        </span>
       </button>
 
       {expanded && (
-        <div className="mt-2 bg-muted p-3 rounded-lg text-xs text-muted-foreground whitespace-pre-wrap transition-all duration-300 ease-in-out">
-          {text}
+        <div className="mt-3 bg-muted p-4 rounded-xl text-xs text-muted-foreground whitespace-pre-wrap transition-all duration-300 ease-in-out space-y-3">
+          {descricao && (
+            <div>
+              <h5 className="font-semibold text-foreground mb-1">
+                Descrição:
+              </h5>
+              <p>{descricao}</p>
+            </div>
+          )}
+
+          {legislacao && (
+            <div>
+              <h5 className="font-semibold text-foreground mb-1">
+                LC 214/25 — Redação:
+              </h5>
+              <p>{legislacao}</p>
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -233,12 +250,12 @@ export default function CSTPage() {
                   <h4 className="font-semibold text-primary">
                     cClassTrib: {item.cClassTrib} — {item["Nome cClassTrib"]}
                   </h4>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    {item["Descrição cClassTrib"]}
-                  </p>
-                  {item["LC 214/25 Redação"] && (
-                    <ExpandableText text={item["LC 214/25 Redação"]} />
-                  )}
+
+                  {/* Botão de legislação expandível */}
+                  <ExpandableLegislation
+                    descricao={item["Descrição cClassTrib"]}
+                    legislacao={item["LC 214/25 Redação"]}
+                  />
                 </Card>
               ))}
             </div>
