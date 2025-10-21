@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
-import { Search, FileText, X } from "lucide-react";
+import { Search, FileText, X, ChevronDown, ChevronUp } from "lucide-react";
 
 // ✅ Tipo para cada item do JSON
 interface CSTItem {
@@ -20,6 +20,36 @@ interface CSTItem {
 interface SelectedCST {
   codigo: string;
   related: CSTItem[];
+}
+
+// ✅ Componente de texto colapsável
+function ExpandableText({ text }: { text: string }) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div className="mt-3">
+      <button
+        onClick={() => setExpanded(!expanded)}
+        className="text-primary text-sm font-medium flex items-center gap-1 hover:underline"
+      >
+        {expanded ? (
+          <>
+            <ChevronUp className="h-4 w-4" /> Ver menos
+          </>
+        ) : (
+          <>
+            <ChevronDown className="h-4 w-4" /> Ver mais
+          </>
+        )}
+      </button>
+
+      {expanded && (
+        <div className="mt-2 bg-muted p-3 rounded-lg text-xs text-muted-foreground whitespace-pre-wrap transition-all duration-300 ease-in-out">
+          {text}
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default function CSTPage() {
@@ -201,15 +231,13 @@ export default function CSTPage() {
               {selectedCST.related.map((item) => (
                 <Card key={item.cClassTrib} className="p-4">
                   <h4 className="font-semibold text-primary">
-  cClassTrib: {item.cClassTrib} — {item["Nome cClassTrib"]}
-</h4>
+                    cClassTrib: {item.cClassTrib} — {item["Nome cClassTrib"]}
+                  </h4>
                   <p className="text-sm text-muted-foreground mt-1">
                     {item["Descrição cClassTrib"]}
                   </p>
                   {item["LC 214/25 Redação"] && (
-                    <pre className="mt-2 whitespace-pre-wrap text-xs text-muted-foreground bg-muted p-3 rounded-lg">
-                      {item["LC 214/25 Redação"]}
-                    </pre>
+                    <ExpandableText text={item["LC 214/25 Redação"]} />
                   )}
                 </Card>
               ))}
