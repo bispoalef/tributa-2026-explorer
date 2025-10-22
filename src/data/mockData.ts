@@ -209,6 +209,11 @@ export const fontesData = [
     url: "http://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc/emc132.htm"
   },
   {
+    nome: "Lei Complementar  nº 214/2025",
+    descricao: "Texto oficial da Reforma Tributária",
+    url: "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm"
+  },
+  {
     nome: "Receita Federal do Brasil",
     descricao: "Portal oficial com orientações e tabelas atualizadas",
     url: "https://www.gov.br/receitafederal/pt-br"
@@ -222,11 +227,6 @@ export const fontesData = [
     nome: "Portal do SPED",
     descricao: "Sistema Público de Escrituração Digital",
     url: "http://sped.rfb.gov.br/"
-  },
-  {
-    nome: "Tabela NCM Completa",
-    descricao: "Nomenclatura Comum do Mercosul atualizada",
-    url: "https://www.gov.br/receitafederal/pt-br/assuntos/aduana-e-comercio-exterior/manuais/nomenclatura-comum-do-mercosul"
   },
   {
     nome: "Conselho Nacional de Política Fazendária",

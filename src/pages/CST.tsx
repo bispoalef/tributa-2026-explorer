@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Search, FileText, X, Scale } from "lucide-react";
 
-// ✅ Tipo para cada item do JSON
+// ✅ Tipo para cada item do JSONF
 interface CSTItem {
   "CST-IBS/CBS": string;
   "Descrição CST-IBS/CBS": string;
@@ -81,7 +81,7 @@ export default function CSTPage() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const res = await fetch("/data/ncm.json");
+        const res = await fetch("/data/cst.json");
         if (!res.ok) throw new Error(`Erro HTTP ${res.status}`);
         const json: CSTItem[] = await res.json();
         setNcmData(json);
@@ -97,7 +97,7 @@ export default function CSTPage() {
 
         setGroupedData(grouped);
       } catch (err) {
-        console.error("Erro ao carregar ncm.json:", err);
+        console.error("Erro ao carregar cst.json:", err);
         setError("Falha ao carregar dados dos CSTs.");
       } finally {
         setLoading(false);

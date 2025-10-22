@@ -48,7 +48,7 @@ const Simulador = () => {
 
     if (form.situacaoTributaria === "06") aliquota = 0.0;
     if (["Imune", "Isento"].includes(form.classificacaoTrib)) aliquota = 0.0;
-    if (form.grupoPrincipal === "servicos") aliquota = 0.05; // exemplo para serviços
+    if (form.grupoPrincipal === "servicos") aliquota = 0.09; // exemplo para serviços
 
     const valorTributo = base * aliquota;
 

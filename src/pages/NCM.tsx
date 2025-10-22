@@ -25,12 +25,12 @@ export default function CSTPage() {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const res = await fetch("/data/ncm.json");
+        const res = await fetch("/data/cst.json");
         if (!res.ok) throw new Error(`Erro HTTP ${res.status}`);
         const json = await res.json();
         setData(json);
       } catch (err) {
-        console.error("Erro ao carregar ncm.json:", err);
+        console.error("Erro ao carregar cst.json:", err);
         setError("Falha ao carregar os dados de CST.");
       } finally {
         setLoading(false);
@@ -62,7 +62,7 @@ export default function CSTPage() {
               <FileText className="h-6 w-6 text-white" />
             </div>
             <h1 className="text-4xl font-bold text-foreground">
-              Consulta de CST
+              Consulta de NCM
             </h1>
           </div>
           <p className="text-lg text-muted-foreground">
