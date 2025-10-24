@@ -99,43 +99,43 @@ export const aliquotasData = [
   {
     tributo: "PIS/COFINS",
     baseLegal: "Lei 10.637/2002 e 10.833/2003",
-    aliquotaCBS: 0.9,
-    aliquotaIBS: 0.1,
+    aliquotaCBS: 3.65,
+    aliquotaIBS: 0.9,
     setor: "Todos (substituído por CBS)"
   },
   {
     tributo: "CBS",
     baseLegal: "EC 132/2023",
     aliquotaCBS: 0.9,
-    aliquotaIBS: 0.1,
+    aliquotaIBS: 0.9,
     setor: "Federal - substituirá PIS/COFINS/IPI"
   },
   {
     tributo: "ICMS",
     baseLegal: "Constituição Federal",
-    aliquotaCBS: 0.9,
+    aliquotaCBS: 19,
     aliquotaIBS: 0.1,
     setor: "Estadual (substituído por IBS)"
   },
   {
     tributo: "ISS",
     baseLegal: "LC 116/2003",
-    aliquotaCBS: 0.9,
+    aliquotaCBS: 5,
     aliquotaIBS: 0.1,
     setor: "Municipal (substituído por IBS)"
   },
   {
     tributo: "IBS",
     baseLegal: "EC 132/2023",
-    aliquotaCBS: 0.9,
+    aliquotaCBS: 0.1,
     aliquotaIBS: 0.1,
     setor: "Estadual/Municipal - substituirá ICMS e ISS"
   },
   {
     tributo: "Imposto Seletivo",
     baseLegal: "EC 132/2023",
-    aliquotaCBS: 0.9,   
-    aliquotaIBS: 0.1,
+    aliquotaCBS: 0,   
+    aliquotaIBS: 0,
     setor: "Produtos prejudiciais à saúde/meio ambiente"
   },
 ];
