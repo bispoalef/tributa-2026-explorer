@@ -1,0 +1,498 @@
+[
+ {
+  "NCM": "0101.21.00",
+  "Descrição": "Reprodutores de raça pura",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "0101.29.00",
+  "Descrição": "Outros",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "0101.30.00",
+  "Descrição": "Asininos",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "0101.90.00",
+  "Descrição": "Outros",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "0105.94.00",
+  "Descrição": "Aves da espécie Gallus domesticus",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "0105.99.00",
+  "Descrição": "Outros",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "0106.11.00",
+  "Descrição": "Primatas",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "0106.12.00",
+  "Descrição": "Baleias, golfinhos e botos (mamíferos da ordem Cetacea); peixesoi (manatins) e dugongos (mamíferos da ordem Sirenia); otárias e focas, leõesarinhos e morsas (mamíferos da subordem Pinnipedia)",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "0106.13.00",
+  "Descrição": "Camelos e outros camelídeos (Camelidae)",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "0106.14.00",
+  "Descrição": "Coelhos e lebres",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "0106.19.00",
+  "Descrição": "Outros",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "0106.20.00",
+  "Descrição": "Répteis (incluindo as serpentes e as tartarugas marinhas)",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "0106.31.00",
+  "Descrição": "Aves de rapina",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "0106.32.00",
+  "Descrição": "Psitaciformes (incluindo os papagaios, os periquitos, as araras e as catatuas)",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "0106.33.10",
+  "Descrição": "Avestruzes (Struthio camelus), para reprodução",
+  "cClassTrib": "000001",
+  "Alíquota CBS": 0.009,
+  "Alíquota IBS": 0.001,
+  "Modalidade": "Operações sujeitas à incidência integral do IBS e da CBS."
+ },
+ {
+  "NCM": "5001.00.00",
+  "Descrição": "Fotografias artísticas originais",
+  "cClassTrib": "200039",
+  "Alíquota CBS": 0.0036,
+  "Alíquota IBS": 0.0004,
+  "Modalidade": "Prestação de serviços, bem como o licenciamento ou a cessão de direitos vinculados a produções artísticas de origem nacional.",
+  "Anexo": "Anexo X"
+ },
+ {
+  "NCM": "9701.99.00",
+  "Descrição": "Quadros, pinturas e desenhos, artísticos originais",
+  "cClassTrib": "200039",
+  "Alíquota CBS": 0.0036,
+  "Alíquota IBS": 0.0004,
+  "Modalidade": "Prestação de serviços, bem como o licenciamento ou a cessão de direitos vinculados a produções artísticas de origem nacional.",
+  "Anexo": "Anexo X"
+ },
+ {
+  "NCM": "9703.90.00",
+  "Descrição": "Gravuras, estampas e litografias, artísticas originais",
+  "cClassTrib": "200039",
+  "Alíquota CBS": 0.0036,
+  "Alíquota IBS": 0.0004,
+  "Modalidade": "Prestação de serviços, bem como o licenciamento ou a cessão de direitos vinculados a produções artísticas de origem nacional.",
+  "Anexo": "Anexo X"
+ },
+ {
+  "NCM": "9705.10.00",
+  "Descrição": "Produções originais de arte estatutária ou de escultura",
+  "cClassTrib": "200039",
+  "Alíquota CBS": 0.0036,
+  "Alíquota IBS": 0.0004,
+  "Modalidade": "Prestação de serviços, bem como o licenciamento ou a cessão de direitos vinculados a produções artísticas de origem nacional.",
+  "Anexo": "Anexo X"
+ },
+ {
+  "NCM": "9018.12.90",
+  "Descrição": "Eletrocardiógrafos",
+  "cClassTrib": "200004",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Comercialização de dispositivos médicos.",
+  "Anexo": "Anexo XII"
+ },
+ {
+  "NCM": "9018.13.00",
+  "Descrição": "Ecógrafos com análise espectral Doppler",
+  "cClassTrib": "200004",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Comercialização de dispositivos médicos.",
+  "Anexo": "Anexo XII"
+ },
+ {
+  "NCM": "9018.14.10",
+  "Descrição": "Outros",
+  "cClassTrib": "200004",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Comercialização de dispositivos médicos.",
+  "Anexo": "Anexo XII"
+ },
+ {
+  "NCM": "9018.14.20",
+  "Descrição": "Aparelhos de diagnóstico por visualização de ressonância magnética",
+  "cClassTrib": "200004",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Comercialização de dispositivos médicos.",
+  "Anexo": "Anexo XII"
+ },
+ {
+  "NCM": "9018.20.10",
+  "Descrição": "Aparelhos de eletrodiagnóstico, exceto os produtos classificados nos códigos 9018.11.00, 9018.12.10, 9018.12.90, 9018.13.00, 9018.14.10, 9018.14.20, 9018.14.90, 9018.19.10 e 9018.19.20        Monitor multiparâmetros",
+  "cClassTrib": "200004",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Comercialização de dispositivos médicos.",
+  "Anexo": "Anexo XII"
+ },
+ {
+  "NCM": "3006.40.11",
+  "Descrição": "Reagentes de diagnóstico concebidos para serem administrados ao paciente, à base de somatoliberina",
+  "cClassTrib": "200030",
+  "Alíquota CBS": 0.0036,
+  "Alíquota IBS": 0.0004,
+  "Modalidade": "Comercialização de dispositivos médicos ",
+  "Anexo": "Anexo IV"
+ },
+ {
+  "NCM": "3006.50.00",
+  "Descrição": "Produtos para obturação dentária, exceto cimentos",
+  "cClassTrib": "200030",
+  "Alíquota CBS": 0.0036,
+  "Alíquota IBS": 0.0004,
+  "Modalidade": "Comercialização de dispositivos médicos ",
+  "Anexo": "Anexo IV"
+ },
+ {
+  "NCM": "3006.60.00",
+  "Descrição": "Cimentos para reconstituição óssea",
+  "cClassTrib": "200030",
+  "Alíquota CBS": 0.0036,
+  "Alíquota IBS": 0.0004,
+  "Modalidade": "Comercialização de dispositivos médicos ",
+  "Anexo": "Anexo IV"
+ },
+ {
+  "NCM": "3006.91.90",
+  "Descrição": "Preparações em gel, concebidas para uso em medicina humana ou veterinária como lubrificante para certas partes do corpo em intervenções cirúrgicas ou exames médicos ou como agente de ligação entre o corpo e os instrumentos médicos",
+  "cClassTrib": "200030",
+  "Alíquota CBS": 0.0036,
+  "Alíquota IBS": 0.0004,
+  "Modalidade": "Comercialização de dispositivos médicos ",
+  "Anexo": "Anexo IV"
+ },
+ {
+  "NCM": "3006.92.00",
+  "Descrição": "Bolsas para uso em colostomia, ileostomia e urostomia",
+  "cClassTrib": "200030",
+  "Alíquota CBS": 0.0036,
+  "Alíquota IBS": 0.0004,
+  "Modalidade": "Comercialização de dispositivos médicos ",
+  "Anexo": "Anexo IV"
+ },
+ {
+  "NCM": "3002.12.24",
+  "Descrição": "Outras imunoglobulinas séricas",
+  "cClassTrib": "200030",
+  "Alíquota CBS": 0.0036,
+  "Alíquota IBS": 0.0004,
+  "Modalidade": "Comercialização de dispositivos médicos ",
+  "Anexo": "Anexo IV"
+ },
+ {
+  "NCM": "3002.12.24",
+  "Descrição": "Outras imunoglobulinas séricas",
+  "cClassTrib": "200038",
+  "Modalidade": "Disponibilização de insumos destinados às atividades agropecuárias e aquícolas .",
+  "Anexo": "Anexo IX"
+ },
+ {
+  "NCM": "3002.12.32",
+  "Descrição": "Outras frações do sangue, exceto as preparadas como medicamentos, as\n imunoglobulinas séricas, o concentrado de fator VIII e a soroalbumina sob a forma de gel para preparação de reagentes de diagnóstico                                                                                                            Outros",
+  "cClassTrib": "200030",
+  "Alíquota CBS": 0.0036,
+  "Alíquota IBS": 0.0004,
+  "Modalidade": "Comercialização de dispositivos médicos.",
+  "Anexo": "Anexo IV"
+ },
+ {
+  "NCM": "3002.12.32",
+  "Descrição": "Outras frações do sangue, exceto as preparadas como medicamentos, as\n imunoglobulinas séricas, o concentrado de fator VIII e a soroalbumina sob a forma de gel para preparação de reagentes de diagnóstico                                                                                                            Outros",
+  "cClassTrib": "200038",
+  "Alíquota CBS": 0.0036,
+  "Alíquota IBS": 0.0004,
+  "Modalidade": "Disponibilização de insumos destinados às atividades agropecuárias e aquícolas .",
+  "Anexo": "Anexo IX"
+ },
+ {
+  "NCM": "0304.31.00",
+  "Descrição": "Tilápias (Oreochromis spp.)",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0304.32.10",
+  "Descrição": "Bagre americano (Ictalurus punctatus)",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana .",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0304.32.90",
+  "Descrição": "Outros",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0304.33.00",
+  "Descrição": "Percaoilo (Lates niloticus)",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0304.39.00",
+  "Descrição": "Outros",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0304.61.00",
+  "Descrição": "Tilápias (Oreochromis spp.)",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0304.62.10",
+  "Descrição": "Bagre americano (Ictalurus punctatus)",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0304.62.90",
+  "Descrição": "Outros",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0304.63.00",
+  "Descrição": "Percaoilo (Lates niloticus)",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0304.69.00",
+  "Descrição": "Outros",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0401.10.10",
+  "Descrição": "Leite UHT (Ultra High Temperature)",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0401.10.90",
+  "Descrição": "Outros",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0401.20.10",
+  "Descrição": "Leite UHT (Ultra High Temperature)",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0401.20.90",
+  "Descrição": "Outros",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0401.40.10",
+  "Descrição": "Leite",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0401.50.10",
+  "Descrição": "Leite",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0402.10.10",
+  "Descrição": "Com um teor de arsênio, chumbo ou cobre, considerados isoladamente, inferior a 5 ppm",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0402.10.90",
+  "Descrição": "Outros",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0402.21.10",
+  "Descrição": "Leite integral",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0402.21.20",
+  "Descrição": "Leite parcialmente desnatado",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0402.29.10",
+  "Descrição": "Leite integral",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0402.29.20",
+  "Descrição": "Leite parcialmente desnatado",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0405.10.00",
+  "Descrição": "Manteiga",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ },
+ {
+  "NCM": "0406.10.10",
+  "Descrição": "Mozarela",
+  "cClassTrib": "200003",
+  "Alíquota CBS": 0,
+  "Alíquota IBS": 0,
+  "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
+  "Anexo": "Anexo I"
+ }
+]
