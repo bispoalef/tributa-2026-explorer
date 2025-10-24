@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
@@ -22,6 +22,15 @@ interface SimulationResult {
   valorTributo: number;
 }
 
+interface CSTItem {
+  "CST-IBS/CBS": string;
+  "Descrição CST-IBS/CBS": string;
+  cClassTrib: string;
+  "Nome cClassTrib": string;
+  "Descrição cClassTrib": string;
+  "LC 214/25 Redação": string;
+}
+
 const Simulador = () => {
   const [form, setForm] = useState({
     ncm: "",
@@ -32,6 +41,34 @@ const Simulador = () => {
   });
 
   const [result, setResult] = useState<SimulationResult | null>(null);
+  const [cstList, setCstList] = useState<CSTItem[]>([]);
+  const [uniqueCSTs, setUniqueCSTs] = useState<string[]>([]);
+  const [filteredClassificacoes, setFilteredClassificacoes] = useState<CSTItem[]>([]);
+
+  // 🔹 Carrega o arquivo JSON de CST
+  useEffect(() => {
+    fetch("/data/cst.json")
+      .then((res) => res.json())
+      .then((data: CSTItem[]) => {
+        setCstList(data);
+
+        // Extrai CSTs únicos
+        const distinct = Array.from(new Set(data.map((i) => i["CST-IBS/CBS"])));
+        setUniqueCSTs(distinct);
+      })
+      .catch((err) => console.error("Erro ao carregar CSTs:", err));
+  }, []);
+
+  // 🔹 Atualiza classificações conforme CST selecionado
+  useEffect(() => {
+    if (form.situacaoTributaria) {
+      const filtradas = cstList.filter(
+        (i) => i["CST-IBS/CBS"] === form.situacaoTributaria
+      );
+      setFilteredClassificacoes(filtradas);
+      setForm((prev) => ({ ...prev, classificacaoTrib: "" }));
+    }
+  }, [form.situacaoTributaria, cstList]);
 
   const handleChange = (field: string, value: string) => {
     setForm({ ...form, [field]: value });
@@ -133,19 +170,15 @@ const Simulador = () => {
                       id="ncm"
                       placeholder="Ex: 6201-5/01 (Desenvolvimento de software)"
                       value={form.ncm}
-                      onChange={(e) =>
-                        handleChange("ncm", e.target.value)
-                      }
+                      onChange={(e) => handleChange("ncm", e.target.value)}
                     />
                   </>
                 )}
               </div>
 
-              {/* Situação Tributária */}
+              {/* Situação Tributária (CST) */}
               <div>
-                <Label htmlFor="situacaoTributaria">
-                  Situação Tributária (CST) *
-                </Label>
+                <Label htmlFor="situacaoTributaria">Situação Tributária (CST) *</Label>
                 <Select
                   value={form.situacaoTributaria}
                   onValueChange={(v) => handleChange("situacaoTributaria", v)}
@@ -154,31 +187,43 @@ const Simulador = () => {
                     <SelectValue placeholder="Selecione a situação" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="01">01 - Operação Tributável</SelectItem>
-                    <SelectItem value="06">06 - Alíquota Zero</SelectItem>
-                    <SelectItem value="49">49 - Outras Operações</SelectItem>
+                    {uniqueCSTs.map((cst) => {
+                      const descricao = cstList.find(
+                        (i) => i["CST-IBS/CBS"] === cst
+                      )?.["Descrição CST-IBS/CBS"];
+                      return (
+                        <SelectItem key={cst} value={cst}>
+                          {cst} - {descricao}
+                        </SelectItem>
+                      );
+                    })}
                   </SelectContent>
                 </Select>
               </div>
 
               {/* Classificação Tributária */}
               <div>
-                <Label htmlFor="classificacaoTrib">
-                  Classificação Tributária *
-                </Label>
+                <Label htmlFor="classificacaoTrib">Classificação Tributária *</Label>
                 <Select
                   value={form.classificacaoTrib}
-                  onValueChange={(v) =>
-                    handleChange("classificacaoTrib", v)
-                  }
+                  onValueChange={(v) => handleChange("classificacaoTrib", v)}
+                  disabled={!form.situacaoTributaria}
                 >
                   <SelectTrigger id="classificacaoTrib">
-                    <SelectValue placeholder="Selecione a classificação" />
+                    <SelectValue
+                      placeholder={
+                        form.situacaoTributaria
+                          ? "Selecione a classificação"
+                          : "Selecione o CST primeiro"
+                      }
+                    />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="Normal">Normal</SelectItem>
-                    <SelectItem value="Imune">Imune</SelectItem>
-                    <SelectItem value="Isento">Isento</SelectItem>
+                    {filteredClassificacoes.map((item) => (
+                      <SelectItem key={item.cClassTrib} value={item.cClassTrib}>
+                        {item.cClassTrib} - {item["Nome cClassTrib"]}
+                      </SelectItem>
+                    ))}
                   </SelectContent>
                 </Select>
               </div>
