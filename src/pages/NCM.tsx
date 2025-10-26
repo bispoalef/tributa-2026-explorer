@@ -260,12 +260,13 @@ const NCM = () => {
               );
 
               // 🔹 Descrições CST sem duplicatas e lógica condicional
-              const descricoesCST = item.cClassTribList
-                .map((c) => getDescricaoCST(c))
-                .filter((d) => d && d !== "descrição CST não encontrada");
+              const descricoesCST: string[] = item.cClassTribList
+                .map((c: string) => getDescricaoCST(c))
+                .filter((d: string): d is string => Boolean(d && d !== "descrição CST não encontrada"));
 
-              const descricoesUnicas = Array.from(new Set(descricoesCST));
-              const descricaoCST =
+              const descricoesUnicas: string[] = Array.from(new Set(descricoesCST));
+
+              const descricaoCST: string =
                 descricoesUnicas.length === 1
                   ? descricoesUnicas[0]
                   : descricoesUnicas.join(" • ");
