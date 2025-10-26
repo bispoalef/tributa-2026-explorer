@@ -151,7 +151,15 @@ const NCM = () => {
     const items = anexoData[key] ?? anexoData[`ANEXO ${anexo}`];
     if (!items) return;
 
-    const itensDoNcm = items.filter(
+    // 🔹 Pega o primeiro item, que contém a descrição geral do anexo
+    const descricaoAnexo =
+      items[0] && typeof items[0][key] === "string" ? items[0][key] : null;
+
+    // 🔹 Filtra os itens reais, ignorando o primeiro (que é só o cabeçalho)
+    const conteudoItens = items.slice(1);
+
+    // 🔹 Verifica se há itens relacionados ao NCM
+    const itensDoNcm = conteudoItens.filter(
       (obj: any) =>
         Array.isArray(obj.NCM_NBS) &&
         obj.NCM_NBS.some(
@@ -159,10 +167,11 @@ const NCM = () => {
         )
     );
 
-    const exibidos = itensDoNcm.length > 0 ? itensDoNcm : items;
+    const exibidos = itensDoNcm.length > 0 ? itensDoNcm : conteudoItens;
 
     setSelectedAnexo({
       nome: key,
+      descricao: descricaoAnexo,
       itens: exibidos,
       filtroAtivo: itensDoNcm.length > 0,
     });
@@ -366,14 +375,22 @@ const NCM = () => {
       {selectedAnexo && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
           <div className="bg-white rounded-2xl shadow-xl max-w-4xl w-full mx-4 overflow-hidden">
-            <div className="flex items-center justify-between p-4 border-b">
-              <h2 className="text-xl font-bold text-foreground">
-                {selectedAnexo.nome}
-              </h2>
+            <div className="flex items-start justify-between p-4 border-b">
+              <div>
+                <h2 className="text-xl font-bold text-foreground">
+                  {selectedAnexo.nome}
+                </h2>
+                {selectedAnexo.descricao && (
+                  <p className="text-sm text-muted-foreground mt-1">
+                    {selectedAnexo.descricao}
+                  </p>
+                )}
+              </div>
               <button onClick={closeModal}>
                 <X className="h-5 w-5 text-muted-foreground" />
               </button>
             </div>
+
 
             <div className="max-h-[70vh] overflow-y-auto p-6 space-y-4">
               {selectedAnexo.filtroAtivo && (
