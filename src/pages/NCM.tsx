@@ -330,8 +330,9 @@ const NCM = () => {
                     onClick={() =>
                       openAnexoModal(selectedNcm.anexo, selectedNcm.codigo)
                     }
-                    className="bg-blue-100 text-blue-700 border border-blue-300 px-3 py-1 text-sm font-semibold cursor-pointer hover:bg-blue-200 transition"
+                    className="bg-blue-100 text-blue-700 border border-blue-300 px-3 py-1 text-sm font-semibold cursor-pointer hover:bg-blue-200 transition flex items-center gap-1"
                   >
+                    <Scale className="h-4 w-4 text-blue-600/80" />
                     {selectedNcm.anexo}
                   </Badge>
                 )}
