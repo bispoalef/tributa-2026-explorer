@@ -83,6 +83,7 @@ const NCM = () => {
           anexoRes.json(),
         ]);
 
+        // 🔹 Normaliza os dados NCM
         const normalizedNCM = ncmRaw.map((item: any) => ({
           codigo: item["NCM"] ?? "",
           descricao: item["Descrição"] ?? "",
@@ -93,6 +94,7 @@ const NCM = () => {
           anexo: item["Anexo"] ?? null,
         }));
 
+        // 🔹 Normaliza os dados CST
         const normalizedCST = cstRaw.map((item: any) => ({
           cClassTrib: item["cClassTrib"] ?? "",
           cst: item["CST-IBS/CBS"] ?? "",
@@ -102,7 +104,38 @@ const NCM = () => {
           legislacao: item["LC 214/25 Redação"] ?? "",
         }));
 
-        setNcmData(normalizedNCM);
+        // 🔹 Agrupa NCMs duplicados
+        const groupedNCM = Object.values(
+          normalizedNCM.reduce((acc: any, item: any) => {
+            const codigo = item.codigo;
+
+            if (!acc[codigo]) {
+              acc[codigo] = {
+                codigo,
+                descricao: item.descricao,
+                aliquotaCBS: item.aliquotaCBS,
+                aliquotaIBS: item.aliquotaIBS,
+                cClassTribList: [],
+                anexosList: [],
+              };
+            }
+
+            if (
+              item.cClassTrib &&
+              !acc[codigo].cClassTribList.includes(item.cClassTrib)
+            ) {
+              acc[codigo].cClassTribList.push(item.cClassTrib);
+            }
+
+            if (item.anexo && !acc[codigo].anexosList.includes(item.anexo)) {
+              acc[codigo].anexosList.push(item.anexo);
+            }
+
+            return acc;
+          }, {})
+        );
+
+        setNcmData(groupedNCM);
         setCstData(normalizedCST);
         setAnexoData(anexosRaw);
       } catch (e) {
@@ -151,14 +184,10 @@ const NCM = () => {
     const items = anexoData[key] ?? anexoData[`ANEXO ${anexo}`];
     if (!items) return;
 
-    // 🔹 Pega o primeiro item, que contém a descrição geral do anexo
     const descricaoAnexo =
       items[0] && typeof items[0][key] === "string" ? items[0][key] : null;
-
-    // 🔹 Filtra os itens reais, ignorando o primeiro (que é só o cabeçalho)
     const conteudoItens = items.slice(1);
 
-    // 🔹 Verifica se há itens relacionados ao NCM
     const itensDoNcm = conteudoItens.filter(
       (obj: any) =>
         Array.isArray(obj.NCM_NBS) &&
@@ -183,8 +212,8 @@ const NCM = () => {
     setSelectedAnexo(null);
   };
 
-  const getCardClasses = (anexo: string | null) =>
-    anexo
+  const getCardClasses = (anexosList: string[] | null) =>
+    anexosList && anexosList.length > 0
       ? "border border-blue-300 bg-blue-50 hover:bg-blue-100 transition-all cursor-pointer"
       : "bg-white cursor-pointer hover:bg-muted/50 transition-all";
 
@@ -193,7 +222,6 @@ const NCM = () => {
       <Header />
 
       <main className="container mx-auto px-4 py-12">
-        {/* Cabeçalho e busca */}
         <div className="mb-8 animate-fade-in">
           <h1 className="mb-4 text-4xl font-bold text-foreground">
             Consulta de NCM
@@ -215,7 +243,6 @@ const NCM = () => {
           />
         </div>
 
-        {/* Lista */}
         {isLoading ? (
           <Card className="p-8 text-center text-muted-foreground">
             Carregando dados...
@@ -231,61 +258,62 @@ const NCM = () => {
                 item.aliquotaCBS,
                 item.aliquotaIBS
               );
-              const ChangeIcon = change.icon;
-              const descricaoCST = getDescricaoCST(item.cClassTrib);
+
+              // 🔹 Descrições CST sem duplicatas e lógica condicional
+              const descricoesCST = item.cClassTribList
+                .map((c) => getDescricaoCST(c))
+                .filter((d) => d && d !== "descrição CST não encontrada");
+
+              const descricoesUnicas = Array.from(new Set(descricoesCST));
+              const descricaoCST =
+                descricoesUnicas.length === 1
+                  ? descricoesUnicas[0]
+                  : descricoesUnicas.join(" • ");
 
               return (
                 <Card
-  key={item.codigo}
-  className={`overflow-hidden group ${getCardClasses(item.anexo)} rounded-xl shadow-sm hover:shadow-md transition-all`}
-  onClick={() => openNcmModal(item)}
-  style={{ animationDelay: `${index * 30}ms` }}
->
-  <div className="flex flex-col md:flex-row">
-    {/* Esquerda — Descrição do NCM */}
-    <div className="flex-1 border-b md:border-b-0 md:border-r p-6 bg-gradient-to-br from-background to-muted/20">
-      <h3 className="text-2xl font-bold text-primary mb-2 tracking-tight group-hover:text-primary/80 transition-colors">
-        {item.codigo}
-      </h3>
-      <p className="text-base text-foreground leading-snug">{item.descricao}</p>
-      <p className="mt-2 text-sm italic text-muted-foreground">
-        {descricaoCST}
-      </p>
-    </div>
+                  key={item.codigo}
+                  className={`overflow-hidden group ${getCardClasses(
+                    item.anexosList
+                  )} rounded-xl shadow-sm hover:shadow-md transition-all`}
+                  onClick={() => openNcmModal(item)}
+                  style={{ animationDelay: `${index * 30}ms` }}
+                >
+                  <div className="flex flex-col md:flex-row">
+                    <div className="flex-1 border-b md:border-b-0 md:border-r p-6 bg-gradient-to-br from-background to-muted/20">
+                      <h3 className="text-2xl font-bold text-primary mb-2 tracking-tight group-hover:text-primary/80 transition-colors">
+                        {item.codigo}
+                      </h3>
+                      <p className="text-base text-foreground leading-snug">
+                        {item.descricao}
+                      </p>
+                      <p className="mt-2 text-sm italic text-muted-foreground">
+                        {descricaoCST}
+                      </p>
+                    </div>
 
-    {/* Direita — Alíquotas */}
-    <div className="w-full md:w-96 bg-gradient-to-b from-blue-50 to-blue-100/40 dark:from-slate-800 dark:to-slate-900 p-6 flex flex-col justify-center">
-      <div className="grid grid-cols-2 gap-6">
-        {/* CBS */}
-        <div className="text-center">
-          <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium mb-1">
-            CBS
-          </div>
-          <div className="text-3xl font-bold text-blue-800 dark:text-blue-400">
-            {(item.aliquotaCBS * 100).toFixed(2)}%
-          </div>
-          <div className="text-[11px] text-muted-foreground mt-1">
-            Contribuição sobre Bens e Serviços
-          </div>
-        </div>
-
-        {/* IBS */}
-        <div className="text-center border-l border-border pl-6">
-          <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium mb-1">
-            IBS
-          </div>
-          <div className="text-3xl font-bold text-blue-800 dark:text-blue-400">
-            {(item.aliquotaIBS * 100).toFixed(2)}%
-          </div>
-          <div className="text-[11px] text-muted-foreground mt-1">
-            Imposto sobre Bens e Serviços
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</Card>
-
+                    <div className="w-full md:w-96 bg-gradient-to-b from-blue-50 to-blue-100/40 dark:from-slate-800 dark:to-slate-900 p-6 flex flex-col justify-center">
+                      <div className="grid grid-cols-2 gap-6">
+                        <div className="text-center">
+                          <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium mb-1">
+                            CBS
+                          </div>
+                          <div className="text-3xl font-bold text-blue-800 dark:text-blue-400">
+                            {(item.aliquotaCBS * 100).toFixed(2)}%
+                          </div>
+                        </div>
+                        <div className="text-center border-l border-border pl-6">
+                          <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium mb-1">
+                            IBS
+                          </div>
+                          <div className="text-3xl font-bold text-blue-800 dark:text-blue-400">
+                            {(item.aliquotaIBS * 100).toFixed(2)}%
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
               );
             })}
           </div>
@@ -294,7 +322,7 @@ const NCM = () => {
 
       <Footer />
 
-      {/* Modal principal com badges */}
+      {/* Modal principal */}
       {selectedNcm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
           <div className="bg-white rounded-2xl shadow-xl max-w-3xl w-full mx-4 overflow-hidden animate-fade-in">
@@ -309,35 +337,31 @@ const NCM = () => {
 
             <div className="p-6 space-y-4 max-h-[70vh] overflow-y-auto">
               <div className="flex flex-wrap gap-2">
-                <Badge
-                  variant="outline"
-                  className="border-primary/30 bg-primary/5 px-3 py-1 text-sm text-primary cursor-default"
-                >
-                  <span className="text-muted-foreground">CST:</span>{" "}
-                  {getCSTValue(selectedNcm.cClassTrib)}
-                </Badge>
-
-                <Badge
-                  variant="outline"
-                  onClick={() => openCClassModal(selectedNcm.cClassTrib)}
-                  className="border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary cursor-pointer hover:bg-primary/20 transition"
-                >
-                  <span className="text-muted-foreground">cClassTrib:</span>{" "}
-                  {selectedNcm.cClassTrib || "—"}
-                </Badge>
-
-                {selectedNcm.anexo && (
+                {selectedNcm.cClassTribList.map((cClass: string) => (
                   <Badge
+                    key={cClass}
+                    variant="outline"
+                    onClick={() => openCClassModal(cClass)}
+                    className="border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary cursor-pointer hover:bg-primary/20 transition"
+                  >
+                    <span className="text-muted-foreground">cClassTrib:</span>{" "}
+                    {cClass}
+                  </Badge>
+                ))}
+
+                {selectedNcm.anexosList.map((anexo: string) => (
+                  <Badge
+                    key={anexo}
                     variant="secondary"
                     onClick={() =>
-                      openAnexoModal(selectedNcm.anexo, selectedNcm.codigo)
+                      openAnexoModal(anexo, selectedNcm.codigo)
                     }
                     className="bg-blue-100 text-blue-700 border border-blue-300 px-3 py-1 text-sm font-semibold cursor-pointer hover:bg-blue-200 transition flex items-center gap-1"
                   >
                     <Scale className="h-4 w-4 text-blue-600/80" />
-                    {selectedNcm.anexo}
+                    {anexo}
                   </Badge>
-                )}
+                ))}
               </div>
 
               <p className="text-foreground">{selectedNcm.descricao}</p>
@@ -393,7 +417,6 @@ const NCM = () => {
                 <X className="h-5 w-5 text-muted-foreground" />
               </button>
             </div>
-
 
             <div className="max-h-[70vh] overflow-y-auto p-6 space-y-4">
               {selectedAnexo.filtroAtivo && (

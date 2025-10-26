@@ -258,6 +258,8 @@
   "NCM": "3002.12.24",
   "Descrição": "Outras imunoglobulinas séricas",
   "cClassTrib": "200038",
+  "Alíquota CBS": 0.0036,
+  "Alíquota IBS": 0.0004,
   "Modalidade": "Disponibilização de insumos destinados às atividades agropecuárias e aquícolas .",
   "Anexo": "ANEXO IX"
  },
