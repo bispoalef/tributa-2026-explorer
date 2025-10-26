@@ -236,54 +236,56 @@ const NCM = () => {
 
               return (
                 <Card
-                  key={item.codigo}
-                  className={`overflow-hidden ${getCardClasses(item.anexo)}`}
-                  onClick={() => openNcmModal(item)}
-                  style={{ animationDelay: `${index * 30}ms` }}
-                >
-                  <div className="flex flex-col md:flex-row">
-                    {/* Esquerda */}
-                    <div className="flex-1 border-b p-6 md:border-b-0 md:border-r">
-                      <h3 className="text-2xl font-bold text-primary mb-2">
-                        {item.codigo}
-                      </h3>
-                      <p className="text-foreground">{item.descricao}</p>
-                      <p className="mt-2 text-sm italic text-muted-foreground">
-                        {descricaoCST}
-                      </p>
-                    </div>
+  key={item.codigo}
+  className={`overflow-hidden group ${getCardClasses(item.anexo)} rounded-xl shadow-sm hover:shadow-md transition-all`}
+  onClick={() => openNcmModal(item)}
+  style={{ animationDelay: `${index * 30}ms` }}
+>
+  <div className="flex flex-col md:flex-row">
+    {/* Esquerda — Descrição do NCM */}
+    <div className="flex-1 border-b md:border-b-0 md:border-r p-6 bg-gradient-to-br from-background to-muted/20">
+      <h3 className="text-2xl font-bold text-primary mb-2 tracking-tight group-hover:text-primary/80 transition-colors">
+        {item.codigo}
+      </h3>
+      <p className="text-base text-foreground leading-snug">{item.descricao}</p>
+      <p className="mt-2 text-sm italic text-muted-foreground">
+        {descricaoCST}
+      </p>
+    </div>
 
-                    {/* Direita — Alíquotas */}
-                    <div className="w-full md:w-80 bg-gradient-to-b from-muted/30 to-muted/50 p-6 flex flex-col justify-center">
-                      <div className="space-y-3">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <div className="text-xs text-muted-foreground">
-                              ALÍQUOTA CBS
-                            </div>
-                            <div className="text-2xl font-bold text-primary">
-                              {(item.aliquotaCBS * 100).toFixed(2)}%
-                            </div>
-                          </div>
-                        </div>
+    {/* Direita — Alíquotas */}
+    <div className="w-full md:w-96 bg-gradient-to-b from-blue-50 to-blue-100/40 dark:from-slate-800 dark:to-slate-900 p-6 flex flex-col justify-center">
+      <div className="grid grid-cols-2 gap-6">
+        {/* CBS */}
+        <div className="text-center">
+          <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium mb-1">
+            CBS
+          </div>
+          <div className="text-3xl font-bold text-blue-800 dark:text-blue-400">
+            {(item.aliquotaCBS * 100).toFixed(2)}%
+          </div>
+          <div className="text-[11px] text-muted-foreground mt-1">
+            Contribuição sobre Bens e Serviços
+          </div>
+        </div>
 
-                        <div className="flex items-center justify-between border-t border-border pt-3">
-                          <div>
-                            <div className="text-xs text-muted-foreground">
-                              ALÍQUOTA IBS
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <div className="text-2xl font-bold text-primary">
-                                {(item.aliquotaIBS * 100).toFixed(2)}%
-                              </div>
-                              <ChangeIcon className={`h-5 w-5 ${change.color}`} />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Card>
+        {/* IBS */}
+        <div className="text-center border-l border-border pl-6">
+          <div className="text-xs uppercase tracking-wide text-muted-foreground font-medium mb-1">
+            IBS
+          </div>
+          <div className="text-3xl font-bold text-blue-800 dark:text-blue-400">
+            {(item.aliquotaIBS * 100).toFixed(2)}%
+          </div>
+          <div className="text-[11px] text-muted-foreground mt-1">
+            Imposto sobre Bens e Serviços
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Card>
+
               );
             })}
           </div>
