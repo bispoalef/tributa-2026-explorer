@@ -126,7 +126,7 @@
   "Alíquota CBS": 0.0036,
   "Alíquota IBS": 0.0004,
   "Modalidade": "Prestação de serviços, bem como o licenciamento ou a cessão de direitos vinculados a produções artísticas de origem nacional.",
-  "Anexo": "Anexo X"
+  "Anexo": "ANEXO X"
  },
  {
   "NCM": "9701.99.00",
@@ -135,7 +135,7 @@
   "Alíquota CBS": 0.0036,
   "Alíquota IBS": 0.0004,
   "Modalidade": "Prestação de serviços, bem como o licenciamento ou a cessão de direitos vinculados a produções artísticas de origem nacional.",
-  "Anexo": "Anexo X"
+  "Anexo": "ANEXO X"
  },
  {
   "NCM": "9703.90.00",
@@ -144,7 +144,7 @@
   "Alíquota CBS": 0.0036,
   "Alíquota IBS": 0.0004,
   "Modalidade": "Prestação de serviços, bem como o licenciamento ou a cessão de direitos vinculados a produções artísticas de origem nacional.",
-  "Anexo": "Anexo X"
+  "Anexo": "ANEXO X"
  },
  {
   "NCM": "9705.10.00",
@@ -153,7 +153,7 @@
   "Alíquota CBS": 0.0036,
   "Alíquota IBS": 0.0004,
   "Modalidade": "Prestação de serviços, bem como o licenciamento ou a cessão de direitos vinculados a produções artísticas de origem nacional.",
-  "Anexo": "Anexo X"
+  "Anexo": "ANEXO X"
  },
  {
   "NCM": "9018.12.90",
@@ -162,7 +162,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Comercialização de dispositivos médicos.",
-  "Anexo": "Anexo XII"
+  "Anexo": "ANEXO XII"
  },
  {
   "NCM": "9018.13.00",
@@ -171,7 +171,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Comercialização de dispositivos médicos.",
-  "Anexo": "Anexo XII"
+  "Anexo": "ANEXO XII"
  },
  {
   "NCM": "9018.14.10",
@@ -180,7 +180,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Comercialização de dispositivos médicos.",
-  "Anexo": "Anexo XII"
+  "Anexo": "ANEXO XII"
  },
  {
   "NCM": "9018.14.20",
@@ -189,7 +189,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Comercialização de dispositivos médicos.",
-  "Anexo": "Anexo XII"
+  "Anexo": "ANEXO XII"
  },
  {
   "NCM": "9018.20.10",
@@ -198,7 +198,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Comercialização de dispositivos médicos.",
-  "Anexo": "Anexo XII"
+  "Anexo": "ANEXO XII"
  },
  {
   "NCM": "3006.40.11",
@@ -207,7 +207,7 @@
   "Alíquota CBS": 0.0036,
   "Alíquota IBS": 0.0004,
   "Modalidade": "Comercialização de dispositivos médicos ",
-  "Anexo": "Anexo IV"
+  "Anexo": "ANEXO IV"
  },
  {
   "NCM": "3006.50.00",
@@ -216,7 +216,7 @@
   "Alíquota CBS": 0.0036,
   "Alíquota IBS": 0.0004,
   "Modalidade": "Comercialização de dispositivos médicos ",
-  "Anexo": "Anexo IV"
+  "Anexo": "ANEXO IV"
  },
  {
   "NCM": "3006.60.00",
@@ -225,7 +225,7 @@
   "Alíquota CBS": 0.0036,
   "Alíquota IBS": 0.0004,
   "Modalidade": "Comercialização de dispositivos médicos ",
-  "Anexo": "Anexo IV"
+  "Anexo": "ANEXO IV"
  },
  {
   "NCM": "3006.91.90",
@@ -234,7 +234,7 @@
   "Alíquota CBS": 0.0036,
   "Alíquota IBS": 0.0004,
   "Modalidade": "Comercialização de dispositivos médicos ",
-  "Anexo": "Anexo IV"
+  "Anexo": "ANEXO IV"
  },
  {
   "NCM": "3006.92.00",
@@ -243,7 +243,7 @@
   "Alíquota CBS": 0.0036,
   "Alíquota IBS": 0.0004,
   "Modalidade": "Comercialização de dispositivos médicos ",
-  "Anexo": "Anexo IV"
+  "Anexo": "ANEXO IV"
  },
  {
   "NCM": "3002.12.24",
@@ -252,14 +252,14 @@
   "Alíquota CBS": 0.0036,
   "Alíquota IBS": 0.0004,
   "Modalidade": "Comercialização de dispositivos médicos ",
-  "Anexo": "Anexo IV"
+  "Anexo": "ANEXO IV"
  },
  {
   "NCM": "3002.12.24",
   "Descrição": "Outras imunoglobulinas séricas",
   "cClassTrib": "200038",
   "Modalidade": "Disponibilização de insumos destinados às atividades agropecuárias e aquícolas .",
-  "Anexo": "Anexo IX"
+  "Anexo": "ANEXO IX"
  },
  {
   "NCM": "3002.12.32",
@@ -268,7 +268,7 @@
   "Alíquota CBS": 0.0036,
   "Alíquota IBS": 0.0004,
   "Modalidade": "Comercialização de dispositivos médicos.",
-  "Anexo": "Anexo IV"
+  "Anexo": "ANEXO IV"
  },
  {
   "NCM": "3002.12.32",
@@ -277,7 +277,7 @@
   "Alíquota CBS": 0.0036,
   "Alíquota IBS": 0.0004,
   "Modalidade": "Disponibilização de insumos destinados às atividades agropecuárias e aquícolas .",
-  "Anexo": "Anexo IX"
+  "Anexo": "ANEXO IX"
  },
  {
   "NCM": "0304.31.00",
@@ -286,7 +286,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0304.32.10",
@@ -295,7 +295,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana .",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0304.32.90",
@@ -304,7 +304,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0304.33.00",
@@ -313,7 +313,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0304.39.00",
@@ -322,7 +322,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0304.61.00",
@@ -331,7 +331,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0304.62.10",
@@ -340,7 +340,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0304.62.90",
@@ -349,7 +349,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0304.63.00",
@@ -358,7 +358,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0304.69.00",
@@ -367,7 +367,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0401.10.10",
@@ -376,7 +376,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0401.10.90",
@@ -385,7 +385,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0401.20.10",
@@ -394,7 +394,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0401.20.90",
@@ -403,7 +403,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0401.40.10",
@@ -412,7 +412,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0401.50.10",
@@ -421,7 +421,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0402.10.10",
@@ -430,7 +430,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0402.10.90",
@@ -439,7 +439,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0402.21.10",
@@ -448,7 +448,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0402.21.20",
@@ -457,7 +457,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0402.29.10",
@@ -466,7 +466,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0402.29.20",
@@ -475,7 +475,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0405.10.00",
@@ -484,7 +484,7 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  },
  {
   "NCM": "0406.10.10",
@@ -493,6 +493,6 @@
   "Alíquota CBS": 0,
   "Alíquota IBS": 0,
   "Modalidade": "Fornecimento de produtos voltados à alimentação humana.",
-  "Anexo": "Anexo I"
+  "Anexo": "ANEXO I"
  }
 ]
