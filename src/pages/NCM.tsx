@@ -266,12 +266,14 @@ const NCM = () => {
 
 
 
-      {/* Modal principal NCM */}
+ {/* Modal principal */}
       {selectedNcm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
           <div className="bg-white rounded-2xl shadow-xl max-w-3xl w-full mx-4 overflow-hidden animate-fade-in">
             <div className="flex items-center justify-between p-4 border-b">
-              <h2 className="text-xl font-bold text-foreground">NCM {selectedNcm.codigo}</h2>
+              <h2 className="text-xl font-bold text-foreground">
+                NCM {selectedNcm.codigo}
+              </h2>
               <button onClick={closeModal}>
                 <X className="h-5 w-5 text-muted-foreground" />
               </button>
@@ -286,7 +288,8 @@ const NCM = () => {
                     onClick={() => openCClassModal(cClass)}
                     className="border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary cursor-pointer hover:bg-primary/20 transition"
                   >
-                    <span className="text-muted-foreground">cClassTrib:</span> {cClass}
+                    <span className="text-muted-foreground">cClassTrib:</span>{" "}
+                    {cClass}
                   </Badge>
                 ))}
 
@@ -294,7 +297,9 @@ const NCM = () => {
                   <Badge
                     key={anexo}
                     variant="secondary"
-                    onClick={() => openAnexoModal(anexo, selectedNcm.codigo)}
+                    onClick={() =>
+                      openAnexoModal(anexo, selectedNcm.codigo)
+                    }
                     className="bg-blue-100 text-blue-700 border border-blue-300 px-3 py-1 text-sm font-semibold cursor-pointer hover:bg-blue-200 transition flex items-center gap-1"
                   >
                     <Scale className="h-4 w-4 text-blue-600/80" />
@@ -304,29 +309,78 @@ const NCM = () => {
               </div>
 
               <p className="text-foreground">{selectedNcm.descricao}</p>
+            </div>
+          </div>
+        </div>
+      )}
 
-              {selectedNcm.variacoes.some((v: any) => v.baseLegal) && (
-                <div className="mt-4">
-                  {(() => {
-                    const artigo = selectedNcm.variacoes.find((v: any) => v.baseLegal)?.baseLegal;
-                    if (!artigo) return null;
-                    const link = `https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm#${artigo
-                      .toLowerCase()
-                      .replace("art.", "art")}`;
-                    return (
-                      <a
-                        href={link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-blue-700 underline hover:text-blue-900 text-sm font-medium transition"
-                      >
-                        Ver Base Legal ({artigo})
-                      </a>
-                    );
-                  })()}
-                </div>
+      {/* Modal cClassTrib */}
+      {selectedCClass && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+          <div className="bg-white rounded-2xl shadow-xl max-w-3xl w-full mx-4 overflow-hidden">
+            <div className="flex items-center justify-between p-4 border-b">
+              <h2 className="text-xl font-bold text-foreground">
+                Detalhes cClassTrib {selectedCClass.cClassTrib}
+              </h2>
+              <button onClick={closeModal}>
+                <X className="h-5 w-5 text-muted-foreground" />
+              </button>
+            </div>
+            <div className="max-h-[70vh] overflow-y-auto p-6 space-y-4">
+              <Card className="p-4">
+                <h4 className="font-semibold text-primary">
+                  cClassTrib: {selectedCClass.cClassTrib} —{" "}
+                  {selectedCClass.nomeCClass}
+                </h4>
+                <ExpandableLegislation
+                  descricao={selectedCClass.descricaoCClass}
+                  legislacao={selectedCClass.legislacao}
+                />
+              </Card>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Modal Anexo */}
+      {selectedAnexo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
+          <div className="bg-white rounded-2xl shadow-xl max-w-4xl w-full mx-4 overflow-hidden">
+            <div className="flex items-start justify-between p-4 border-b">
+              <div>
+                <h2 className="text-xl font-bold text-foreground">
+                  {selectedAnexo.nome}
+                </h2>
+                {selectedAnexo.descricao && (
+                  <p className="text-sm text-muted-foreground mt-1">
+                    {selectedAnexo.descricao}
+                  </p>
+                )}
+              </div>
+              <button onClick={closeModal}>
+                <X className="h-5 w-5 text-muted-foreground" />
+              </button>
+            </div>
+
+            <div className="max-h-[70vh] overflow-y-auto p-6 space-y-4">
+              {selectedAnexo.filtroAtivo && (
+                <p className="text-sm text-muted-foreground italic">
+                  Exibindo apenas os itens que contêm o NCM selecionado.
+                </p>
               )}
 
+              {selectedAnexo.itens.map((obj: any, i: number) => (
+                <Card key={i} className="p-4">
+                  <p className="font-semibold text-primary mb-1">
+                    {obj["Descrição"]}
+                  </p>
+                  {obj.NCM_NBS && (
+                    <p className="text-xs text-muted-foreground">
+                      NCM/NBS: {obj.NCM_NBS.join(", ")}
+                    </p>
+                  )}
+                </Card>
+              ))}
             </div>
           </div>
         </div>
