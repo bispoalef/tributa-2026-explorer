@@ -75,7 +75,7 @@ const NCM = () => {
             const cClass = item["cClassTrib"] ?? "";
             const anexo = item["Anexo"] ?? "";
             const modalidade = item["Modalidade"] ?? "";
-            const baseLegal = item["BASE LEGAL"] ?? "";
+            const baseLegal = item["Base Legal"] ?? "";
 
             if (!acc[codigo]) {
               acc[codigo] = {
@@ -150,8 +150,8 @@ const NCM = () => {
     if (related) setSelectedCClass(related);
   };
   const openAnexoModal = (anexo: string, ncmCodigo: string) => {
-    const key = anexo.startsWith("ANEXO") ? anexo : `ANEXO ${anexo}`;
-    const items = anexoData[key] ?? anexoData[`ANEXO ${anexo}`];
+    const key = anexo.startsWith("Anexo") ? anexo : `Anexo ${anexo}`;
+    const items = anexoData[key] ?? anexoData[`Anexo ${anexo}`];
     if (!items) return;
 
     const descricaoAnexo =
@@ -240,7 +240,7 @@ const NCM = () => {
                               CBS
                             </div>
                             <div className="text-3xl font-bold text-blue-800">
-                              {(v.aliquotaCBS * 100).toFixed(2)}%
+                              {(v.aliquotaCBS).toFixed(2)}%
                             </div>
                           </div>
                           <div className="border-l border-border pl-6">
@@ -248,7 +248,7 @@ const NCM = () => {
                               IBS
                             </div>
                             <div className="text-3xl font-bold text-blue-800">
-                              {(v.aliquotaIBS * 100).toFixed(2)}%
+                              {(v.aliquotaIBS).toFixed(2)}%
                             </div>
                           </div>
                         </div>
@@ -268,7 +268,7 @@ const NCM = () => {
 
       {/* Modal principal NCM */}
       {selectedNcm && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
           <div className="bg-white rounded-2xl shadow-xl max-w-3xl w-full mx-4 overflow-hidden animate-fade-in">
             <div className="flex items-center justify-between p-4 border-b">
               <h2 className="text-xl font-bold text-foreground">NCM {selectedNcm.codigo}</h2>
