@@ -110,12 +110,18 @@ export default function CSTPage() {
   // 2️⃣ Filtro de busca otimizado
   const filteredData = useMemo(() => {
     if (!searchTerm.trim()) return groupedData;
+
     const lower = searchTerm.toLowerCase();
-    return groupedData.filter(
-      (item) =>
-        item["CST-IBS/CBS"]?.toLowerCase().includes(lower) ||
-        item["Descrição CST-IBS/CBS"]?.toLowerCase().includes(lower)
-    );
+
+    return groupedData.filter((item) => {
+      const codigo = item["CST-IBS/CBS"] ?? "";
+      const descricao = item["Descrição CST-IBS/CBS"] ?? "";
+
+      return (
+        codigo.toString().toLowerCase().includes(lower) ||
+        descricao.toString().toLowerCase().includes(lower)
+      );
+    });
   }, [searchTerm, groupedData]);
 
   // 3️⃣ Modal
