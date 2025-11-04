@@ -213,6 +213,8 @@ const NCM = () => {
     setSelectedAnexo(null);
     setSelectedBaseLegal(null);
   };
+  const closeCClassModal = () => setSelectedCClass(null);
+const closeAnexoModal = () => setSelectedAnexo(null);
 
   // ---------------------------------------------
   // Renderização
@@ -339,6 +341,68 @@ const NCM = () => {
               </div>
 
               <p className="text-foreground">{selectedNcm.descricao}</p>
+
+{/* Variações detalhadas com base legal individual */}
+<div className="mt-6 space-y-3">
+  {selectedNcm.variacoes.map((v: any, i: number) => (
+    <Card key={i} className="p-4 border border-border/50 hover:shadow-md transition-all duration-200">
+      <div className="space-y-3">
+        {/* Modalidade */}
+        <p className="text-sm text-muted-foreground italic leading-relaxed">
+          {v.modalidade}
+        </p>
+
+        {/* Alíquotas */}
+        <div className="flex flex-wrap gap-8 mt-1">
+          <div>
+            <p className="text-xs uppercase text-muted-foreground font-medium">CBS</p>
+            <p className="text-lg font-semibold text-blue-800">
+              {v.aliquotaCBS.toFixed(2)}%
+            </p>
+          </div>
+          <div>
+            <p className="text-xs uppercase text-muted-foreground font-medium">IBS</p>
+            <p className="text-lg font-semibold text-blue-800">
+              {v.aliquotaIBS.toFixed(2)}%
+            </p>
+          </div>
+        </div>
+
+        {/* Base Legal individual */}
+        {v.baseLegal && (
+          <div className="mt-2 border-t pt-3 border-border/40">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+              <div className="text-sm text-muted-foreground">
+                <span className="font-medium text-foreground">
+                  cClassTrib:
+                </span>{" "}
+                <span className="text-foreground/80">{v.cClassTrib}</span>
+              </div>
+
+              {(() => {
+                const artigo = v.baseLegal;
+                const link = `https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp214.htm#${artigo
+                  .toLowerCase()
+                  .replace("art.", "art")}`;
+                return (
+                  <a
+                    href={link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-700 underline hover:text-blue-900 text-sm font-medium transition"
+                  >
+                    Ver Base Legal ({artigo})
+                  </a>
+                );
+              })()}
+            </div>
+          </div>
+        )}
+      </div>
+    </Card>
+  ))}
+</div>
+
             </div>
           </div>
         </div>
@@ -352,7 +416,7 @@ const NCM = () => {
               <h2 className="text-xl font-bold text-foreground">
                 Detalhes cClassTrib {selectedCClass.cClassTrib}
               </h2>
-              <button onClick={closeModal}>
+              <button onClick={closeCClassModal}>
                 <X className="h-5 w-5 text-muted-foreground" />
               </button>
             </div>
@@ -385,7 +449,7 @@ const NCM = () => {
                   </p>
                 )}
               </div>
-              <button onClick={closeModal}>
+              <button onClick={closeAnexoModal}>
                 <X className="h-5 w-5 text-muted-foreground" />
               </button>
             </div>

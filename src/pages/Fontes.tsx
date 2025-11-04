@@ -117,52 +117,6 @@ const Fontes = () => {
             </ul>
           </Card>
         </div>
-
-        {/* API Documentation Preview */}
-        <Card className="mt-8 overflow-hidden">
-          <div className="h-2 bg-gradient-primary"></div>
-          <div className="p-6">
-            <h3 className="mb-4 text-xl font-semibold text-foreground">
-              📡 Exemplo de Consulta via API
-            </h3>
-            <p className="mb-4 text-sm text-muted-foreground">
-              Este portal disponibilizará uma API pública para consulta de dados. Exemplo de resposta JSON:
-            </p>
-            <div className="rounded-lg bg-muted/50 p-4">
-              <pre className="overflow-x-auto text-xs text-foreground">
-{`{
-  "ncm": "2203.00.00",
-  "descricao": "Cervejas de malte",
-  "unidade": "L",
-  "aliquota_atual": 18.5,
-  "aliquota_cbs": 8.8,
-  "aliquota_ibs": 17.7,
-  "aliquota_is": 1.8,
-  "total_futura": 28.3,
-  "observacoes": "Sujeito ao Imposto Seletivo",
-  "base_legal": "EC 132/2023"
-}`}
-              </pre>
-            </div>
-            <p className="mt-4 text-xs text-muted-foreground">
-              * A API estará disponível em breve com documentação completa e endpoints para consulta de NCM, CST, alíquotas e regimes.
-            </p>
-          </div>
-        </Card>
-
-        {/* Disclaimer */}
-        <Card className="mt-8 border-l-4 border-l-accent bg-accent/5 p-6">
-          <h3 className="mb-2 font-semibold text-foreground">
-            ⚠️ Aviso Importante
-          </h3>
-          <p className="text-sm leading-relaxed text-muted-foreground">
-            As informações apresentadas neste portal são baseadas em fontes oficiais e têm 
-            caráter informativo. Para decisões tributárias específicas, recomenda-se sempre 
-            consultar profissionais especializados (contadores, advogados tributaristas) e 
-            verificar a legislação vigente mais recente. Este portal não se responsabiliza 
-            por decisões tomadas com base exclusivamente nas informações aqui contidas.
-          </p>
-        </Card>
       </main>
 
       <Footer />
